@@ -2,7 +2,7 @@
 var userName = prompt('What is your name?');
 alert('Hi, ' + userName + ', great to meet you!!!');
 console.log('When asked their name, the user responded ' + userName);
-  
+
 var printPlace= document.getElementById('answerPlace');
 var homePlace = prompt('Are you from here').toUpperCase();
 if(homePlace==='YES'||homePlace==='Y'){
@@ -22,8 +22,8 @@ if (favouriteFood==='YES'||favouriteFood==='Y'){
   printFood.textContent= 'We both like momo.';
 }
 else{
-    alert('Why not? That\'s a great food.')
-    printFood.textContent='I love momo, but he  does not.';
+  alert('Why not? That\'s a great food.');
+  printFood.textContent='I love momo, but he  does not.';
 }
 console.log('When asked is momo was their favourite food was, the user responded ' + favouriteFood);
 
@@ -34,8 +34,8 @@ if (restaurant1==='YES'||restaurant1==='Y'){
   printRestaurant.textContent+= 'Our favourite restaurant is Sky Waikiki.';
 }
 else {
-    alert('You should go to Sky waikiki. Its worth it.')
-    printRestaurant.textContent+='His favourite restaurant is not Sky Waikiki, but after lunch, it will be.';
+  alert('You should go to Sky waikiki. Its worth it.');
+  printRestaurant.textContent+='His favourite restaurant is not Sky Waikiki, but after lunch, it will be.';
 }
 console.log('When if Sky Waikiki was their favourite restaurant, the user responded ' + restaurant1);
 
@@ -45,13 +45,11 @@ if(favouriteDrink==='Yes'||favouriteDrink==='Y'){
   alert('That\'s my number one');
   printDrink.textContent+= 'Beer is our favourite drink.';
 }
-  else{
-    alert('We\'ll drink your favourite drink today, whatever you like.');
-    printDrink.textContent+='I love beer, but today we\'ll drink his favourite drink instead ';
+else{
+  alert('We\'ll drink your favourite drink today, whatever you like.');
+  printDrink.textContent+='I love beer, but today we\'ll drink his favourite drink instead ';
 }
 console.log('When asked what restaurant they liked, the user responded ' + favouriteDrink);
-
-var allAnswers= [userName, homePlace, favouriteFood, restaurant1, favouriteDrink];
 
 var printAnswers= document.getElementById('answerResults');
 console.log(printAnswers);
