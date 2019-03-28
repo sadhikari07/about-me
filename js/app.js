@@ -23,7 +23,26 @@ var incorrectResponse = [
   'We\'ll drink your favourite drink today, whatever you like.'
 ];
 
+var posIntroPrint = [
+  'We\'re both from here',
+  'We both like momo.',
+  'Our favourite restaurant is Sky Waikiki.',
+  'Beer is our favourite drink.'
+];
 
+var negIntroPrint = [
+  'I\'m from here, but he is not.',
+  'I love momo, but he  does not.',
+  'His favourite restaurant is not Sky Waikiki, but after lunch, it will be.',
+  'I love beer, but today we\'ll drink his favourite drink instead.'
+];
+
+var idArray = [
+  'answerPlace',
+  'answerFood',
+  'answerRestaurant',
+  'answerDrink'
+];
 
 function introResponse(i) {
   console.log('function is working!');
@@ -33,11 +52,13 @@ function introResponse(i) {
   if(userAnswer === 'yes' || userAnswer === 'y') {
 
     alert(correctResponse[i]);
+    document.getElementById(idArray[i]).textContent=posIntroPrint[i];
   } else {
 
     alert(incorrectResponse[i]);
+    document.getElementById(idArray[i]).textContent=negIntroPrint[i];
   }
-
+  console.log('User responded to Question ' + i + ' with ' + userAnswer);
 }
 
 for (var i = 0 ; i < questionArray.length ; i++) {
@@ -47,61 +68,16 @@ for (var i = 0 ; i < questionArray.length ; i++) {
 }
 
 
-/*
-var printPlace= document.getElementById('answerPlace');
-var homePlace = prompt('Are you from here').toUpperCase();
-if(homePlace==='YES'||homePlace==='Y'){
-  alert('Me too');
-  printPlace.textContent='We\'re both from here.';
-}
-else{
-  alert('Oh okay. I\'m from here.');
-  printPlace.textContent='I\'m from here, but he is not.';
-}
-console.log('When asked if they were from here, user responded ' + homePlace);
 
-var printFood= document.getElementById('answerFood');
-var favouriteFood = prompt('Let me guess your favourite food. Is it momo?').toUpperCase();
-if (favouriteFood==='YES'||favouriteFood==='Y'){
-  alert('Thats awesome. I love momo too.');
-  printFood.textContent= 'We both like momo.';
-}
-else{
-  alert('Why not? That\'s a great food.');
-  printFood.textContent='I love momo, but he  does not.';
-}
-console.log('When asked is momo was their favourite food was, the user responded ' + favouriteFood);
 
-var printRestaurant= document.getElementById('answerRestaurant');
-var restaurant1= prompt('Is your favourite restaurant Sky Waikiki?').toUpperCase();
-if (restaurant1==='YES'||restaurant1==='Y'){
-  alert('Thats my favourite restaurant too.');
-  printRestaurant.textContent+= 'Our favourite restaurant is Sky Waikiki.';
-}
-else {
-  alert('You should go to Sky waikiki. Its worth it.');
-  printRestaurant.textContent+='His favourite restaurant is not Sky Waikiki, but after lunch, it will be.';
-}
-console.log('When if Sky Waikiki was their favourite restaurant, the user responded ' + restaurant1);
 
-var printDrink= document.getElementById('answerDrink');
-var favouriteDrink= prompt('I\'m gonna buy you a drink today. I\'m guessing you like beer.').toUpperCase();
-if(favouriteDrink==='Yes'||favouriteDrink==='Y'){
-  alert('That\'s my number one');
-  printDrink.textContent+= 'Beer is our favourite drink.';
-}
-else{
-  alert('We\'ll drink your favourite drink today, whatever you like.');
-  printDrink.textContent+='I love beer, but today we\'ll drink his favourite drink instead ';
-}
-console.log('When asked what restaurant they liked, the user responded ' + favouriteDrink);
 
 var numberLanguages;
 var correctAnswer=false;
 var actualLanguageNum=5;
 for(var languageGuesses=0; languageGuesses<4 && correctAnswer===false;languageGuesses++){
   numberLanguages = prompt('Can you guess how many languages I can speak?');
-  if(numberLanguages==actualLanguageNum){
+  if(numberLanguages===actualLanguageNum){
     alert('That\'s right. You are a genius');
     correctAnswer=true;
   }
@@ -187,4 +163,4 @@ printResult.textContent= 'You got ' + correctQuiz + ' right out of 5 on the quiz
 
 var printAnswers= document.getElementById('answerResults');
 console.log(printAnswers);
-printAnswers.textContent=' Let\'s see how common we are after that guessing game: '; */
+printAnswers.textContent=' Let\'s see how common we are after that guessing game: ';
