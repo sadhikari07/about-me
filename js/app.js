@@ -3,7 +3,7 @@ var userName = prompt('What is your name?');
 alert('Hi, ' + userName + ', great to meet you!!!');
 console.log('When asked their name, the user responded ' + userName);
 
-var questionArray = ['Are you from here?',
+var questionArray = ['Are you from here?', // These arrays are for the intro questions.
   'Let me guess your favourite food. Is it momo?',
   'Is your favourite restaurant Sky Waikiki?',
   'I\'m gonna buy you a drink today. I\'m guessing you like beer.'
@@ -37,15 +37,15 @@ var negIntroPrint = [
   'I love beer, but today we\'ll drink his favourite drink instead.'
 ];
 
-var idArray = [
+var idArray = [ //All of the above arrays are for the intro questions.
   'answerPlace',
   'answerFood',
   'answerRestaurant',
   'answerDrink'
 ];
 
+// This function is for the introduction questions.
 function introResponse(i) {
-  console.log('function is working!');
 
   var userAnswer = prompt(questionArray[i]).toLowerCase();
 
@@ -61,14 +61,9 @@ function introResponse(i) {
   console.log('User responded to Question ' + i + ' with ' + userAnswer);
 }
 
-for (var i = 0 ; i < questionArray.length ; i++) {
-
-  introResponse(i);
-
-}
-
+// This section is variable + function for the languages question.
 var correctAnswer = false;
-function guessNumber() { 
+function guessNumber() {
   var numberGuess = prompt('Can you guess how many languages I can speak?');
 
   if (numberGuess === '5') {
@@ -79,7 +74,7 @@ function guessNumber() {
     alert('Little higher than that.');
 
   } else if (numberGuess > 5) {
-    alert('Little lower than that.');  
+    alert('Little lower than that.');
 
   } else {
     alert('Please enter a valid response.');
@@ -88,32 +83,7 @@ function guessNumber() {
 
 }
 
-for (var j = 0 ; j < 4 && correctAnswer === false; j ++ ) {
-
-  guessNumber();
-}
-
-/*
-var numberLanguages;
-var correctAnswer=false;
-var actualLanguageNum=5;
-for(var languageGuesses=0; languageGuesses<4 && correctAnswer===false;languageGuesses++){
-  numberLanguages = prompt('Can you guess how many languages I can speak?');
-  if(numberLanguages===actualLanguageNum){
-    alert('That\'s right. You are a genius');
-    correctAnswer=true;
-  }
-  else if (numberLanguages<actualLanguageNum) {
-    alert('Little higher than that.');  
-  }
-  else if(numberLanguages>actualLanguageNum){
-    alert('Little lower than that.');  
-  }
-  else{
-    alert('Please enter a valid response.');
-  }
-} */
-
+// This section is variables + function for the state question.
 var correctStates= ['idaho', 'maryland', 'hawaii'];
 var guessRight = false;
 
@@ -129,29 +99,7 @@ function stateGuessFunction () {
   }
 }
 
-for (var k = 0 ; k < 7 && guessRight === false ; k++) {
-
-  stateGuessFunction();
-}
-
-/*
-var statesBeforeWa;
-
-var amountOfGuesses=0;
-var guessRight=false;
-while(amountOfGuesses<6 && guessRight===false){
-  statesBeforeWa= prompt('Can you name any other states I\'ve lived at besides Seattle?').toLowerCase();
-  if(correctStates.includes(statesBeforeWa)===true){
-    alert('Hey, you got it right. Good job! \n I\'ve lived previously at Idaho, Maryland and Hawaii.');
-    guessRight=true;
-  }
-  else{
-    alert('Not quite.');
-    amountOfGuesses++;
-  }
-} */
-
-alert('Let\'s play a guessing game. \n Answer the following questions and I\'ll let you know how you did.');
+// This section is the arrays + function for the quiz game.
 var correctQuiz=0;
 var quizQuestions= [
   'What is 1+1?',
@@ -160,50 +108,53 @@ var quizQuestions= [
   'Where am I from',
   'Which is the best soccer team in the world'
 ];
-var quizAnswers=['2', 'kathmandu', '2', 'nepal', 'liverpool'];
-var firstAnswer= prompt(quizQuestions[0]);
-if (firstAnswer===quizAnswers[0]){
-  alert('That is correct');
-  correctQuiz++;
-}
-else{
-  alert('That was incorrect.');
-}
-var secondAnswer= prompt(quizQuestions[1]).toLowerCase();
-if (secondAnswer===quizAnswers[1]){
-  alert('That is correct');
-  correctQuiz++;
-}
-else{
-  alert('That was incorrect.');
-}
-var thirdAnswer= prompt(quizQuestions[2]);
-if (thirdAnswer===quizAnswers[2]){
-  alert('That is correct');
-  correctQuiz++;
-}
-else{
-  alert('That was incorrect.');
-}
-var fourthAnswer= prompt(quizQuestions[3]).toLowerCase();
-if (fourthAnswer===quizAnswers[3]){
-  alert('That is correct');
-  correctQuiz++;
-}
-else{
-  alert('That was incorrect.');
-}
-var fifthAnswer= prompt(quizQuestions[4]);
-if (fifthAnswer===quizAnswers[4]){
-  alert('That is correct');
-  correctQuiz++;
-}
-else{
-  alert('That was incorrect.');
-}
-var printResult= document.getElementById('quizResult');
-printResult.textContent= 'You got ' + correctQuiz + ' right out of 5 on the quiz game.';
 
+var quizAnswers=[
+  '2',
+  'kathmandu',
+  '2',
+  'nepal',
+  'liverpool'
+];
+
+function quizFunction(i) {
+  var userAnswer = prompt(quizQuestions[i]).toLowerCase();
+
+  if(userAnswer === quizAnswers[i]) {
+    correctQuiz++;
+    alert('That was correct! You\'ve gotten ' + correctQuiz + ' correct out of ' + (i + 1) + '.');
+
+  } else {
+
+    alert('That was incorrect.  You\'ve gotten ' + correctQuiz + ' correct out of ' + (i + 1) + '.');
+  }
+  console.log('User responded to Question ' + i + ' with ' + userAnswer);
+}
+
+for (var i = 0 ; i < questionArray.length ; i++) { // This for loop runs the first 4 questions.
+
+  introResponse(i);
+}
+
+for (var j = 0 ; j < 4 && correctAnswer === false; j ++ ) { //This for loop runs the # languages question.
+
+  guessNumber();
+}
+
+for (var k = 0 ; k < 7 && guessRight === false ; k++) { // This for loop runs the states question.
+
+  stateGuessFunction();
+}
+
+alert('Let\'s play a guessing game. \n Answer the following questions and I\'ll let you know how you did.');
+
+for (i = 0 ; i < 5 ; i++) { // This for loop runs the 5 question quiz game.
+
+  quizFunction(i);
+}
+
+// These instructions print the results from the quizzes on the page.
+document.getElementById('quizResult').textContent='You got ' + correctQuiz + ' right out of 5 on the quiz game.';
 var printAnswers= document.getElementById('answerResults');
 console.log(printAnswers);
 printAnswers.textContent=' Let\'s see how common we are after that guessing game: ';
