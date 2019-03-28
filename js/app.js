@@ -51,6 +51,101 @@ else{
 }
 console.log('When asked what restaurant they liked, the user responded ' + favouriteDrink);
 
+var numberLanguages;
+var correctAnswer=false;
+var actualLanguageNum=5;
+for(var languageGuesses=0; languageGuesses<4 && correctAnswer===false;languageGuesses++){
+  numberLanguages = prompt('Can you guess how many languages I can speak?');
+  if(numberLanguages==actualLanguageNum){
+    alert('That\'s right. You are a genius');
+    correctAnswer=true;
+  }
+  else if (numberLanguages<actualLanguageNum) {
+    alert('Little higher than that.');  
+  }
+  else if(numberLanguages>actualLanguageNum){
+    alert('Little lower than that.');  
+  }
+  else{
+    alert('Please enter a valid response.');
+  }
+}
+
+var statesBeforeWa;
+var correctStates= ['idaho', 'maryland', 'hawaii'];
+var amountOfGuesses=0;
+var guessRight=false;
+while(amountOfGuesses<6 && guessRight===false){
+  statesBeforeWa= prompt('Can you name any other states I\'ve lived at besides Seattle?').toLowerCase();
+  if(correctStates.includes(statesBeforeWa)===true){
+    alert('Hey, you got it right. Good job! \n I\'ve lived previously at Idaho, Maryland and Hawaii.');
+    guessRight=true;
+  }
+  else{
+    alert('Not quite.');
+    amountOfGuesses++;
+  }
+}
+
+alert('Let\'s play a guessing game. \n Answer the following questions and I\'ll let you know how you did.');
+var correctQuiz=0;
+var wrongQuiz=0;
+var quizQuestions= [
+  'What is 1+1?',
+  'What is the capital of Nepal?',
+  'What is square root of four?',
+  'Where am I from',
+  'Which is the best soccer team in the world'
+];
+var quizAnswers=['2', 'kathmandu', '2', 'nepal', 'liverpool'];
+var firstAnswer= prompt(quizQuestions[0]);
+if (firstAnswer===quizAnswers[0]){
+  alert('That is correct');
+  correctQuiz++;
+}
+else{
+  alert('That was incorrect.');
+  wrongQuiz++;
+}
+var secondAnswer= prompt(quizQuestions[1]).toLowerCase();
+if (secondAnswer===quizAnswers[1]){
+  alert('That is correct');
+  correctQuiz++;
+}
+else{
+  alert('That was incorrect.');
+  wrongQuiz++;
+}
+var thirdAnswer= prompt(quizQuestions[2]);
+if (thirdAnswer===quizAnswers[2]){
+  alert('That is correct');
+  correctQuiz++;
+}
+else{
+  alert('That was incorrect.');
+  wrongQuiz++;
+}
+var fourthAnswer= prompt(quizQuestions[3]).toLowerCase();
+if (fourthAnswer===quizAnswers[3]){
+  alert('That is correct');
+  correctQuiz++;
+}
+else{
+  alert('That was incorrect.');
+  wrongQuiz++;
+}
+var fifthAnswer= prompt(quizQuestions[4]);
+if (fifthAnswer===quizAnswers[4]){
+  alert('That is correct');
+  correctQuiz++;
+}
+else{
+  alert('That was incorrect.');
+  wrongQuiz++;
+}
+var printResult= document.getElementById('quizResult');
+printResult.textContent= 'You got ' + correctQuiz + ' right out of 5 on the quiz game.';
+
 var printAnswers= document.getElementById('answerResults');
 console.log(printAnswers);
 printAnswers.textContent=' Let\'s see how common we are after that guessing game: ';

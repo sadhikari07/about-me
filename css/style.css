@@ -1,3 +1,6 @@
+body{
+  background-color:#2be2db;
+}
 p {
   color: rgb(25, 74, 209);
   font-size: 1.2em
@@ -6,20 +9,29 @@ h1 {
   color: rgb(150, 29, 29)
 }
 h2 {
-  background: violet;
+  background: rgb(82, 122, 59);
   color: PURPLE;
   border-style: dashed; 
-  text-align: center 
+  text-align: center;
 }
 title {
   background: yellow;
   color: blue;
 }
 footer {
-  color: maroon;
-  font-style: italic; 
-  border-style: double
+  color: black;
+  border-style: double;
 }
 main{
-  background: greenyellow
+  background: greenyellow;
+  border: dotted;
+  text-align: center;
+}
+#quizResult{
+  background-color:whitesmoke;
+  font-style: oblique;
+}
+#thankList{
+  background-color: #ff6000;
+  font-style: Arial;
 }
