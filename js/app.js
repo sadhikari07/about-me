@@ -3,6 +3,35 @@ var userName = prompt('What is your name?');
 alert('Hi, ' + userName + ', great to meet you!!!');
 console.log('When asked their name, the user responded ' + userName);
 
+correctResponse = [
+  'we\'re both from here',
+  'That\'s awesome, I love momo too',
+  'Thats my favourite restaurant too.',
+  'That\'s my number one',
+];
+
+incorrectResponse = [
+  'Oh okay. I\'m from here.',
+  'Why not? Momo\'s a great food.',
+  'Our favourite restaurant is Sky Waikiki.',
+  'Beer is our favourite drink.'
+];
+
+
+function introResponse(question, correctAnswer, i) {
+
+  var userAnswer = prompt('question');
+
+  if(userAnswer === correctAnswer) {
+
+    alert(correctResponse[i] );
+  }
+
+
+}
+
+
+
 var printPlace= document.getElementById('answerPlace');
 var homePlace = prompt('Are you from here').toUpperCase();
 if(homePlace==='YES'||homePlace==='Y'){
