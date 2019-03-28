@@ -67,11 +67,34 @@ for (var i = 0 ; i < questionArray.length ; i++) {
 
 }
 
+var correctAnswer = false;
+function guessNumber() { 
+  var numberGuess = prompt('Can you guess how many languages I can speak?');
+
+  if (numberGuess === '5') {
+    alert('That\'s right. You are a genius');
+    correctAnswer = true;
+
+  } else if (numberGuess < 5) {
+    alert('Little higher than that.');
+
+  } else if (numberGuess > 5) {
+    alert('Little lower than that.');  
+
+  } else {
+    alert('Please enter a valid response.');
+
+  }
+
+}
+
+for (var j = 0 ; j < 4 && correctAnswer === false; j ++ ) {
+
+  guessNumber(j);
+}
 
 
-
-
-
+/*
 var numberLanguages;
 var correctAnswer=false;
 var actualLanguageNum=5;
@@ -90,7 +113,7 @@ for(var languageGuesses=0; languageGuesses<4 && correctAnswer===false;languageGu
   else{
     alert('Please enter a valid response.');
   }
-}
+} */
 
 var statesBeforeWa;
 var correctStates= ['idaho', 'maryland', 'hawaii'];
