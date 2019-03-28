@@ -90,9 +90,8 @@ function guessNumber() {
 
 for (var j = 0 ; j < 4 && correctAnswer === false; j ++ ) {
 
-  guessNumber(j);
+  guessNumber();
 }
-
 
 /*
 var numberLanguages;
@@ -115,8 +114,29 @@ for(var languageGuesses=0; languageGuesses<4 && correctAnswer===false;languageGu
   }
 } */
 
-var statesBeforeWa;
 var correctStates= ['idaho', 'maryland', 'hawaii'];
+var guessRight = false;
+
+function stateGuessFunction () {
+  var stateGuess = prompt('Can you name any other states I\'ve lived at besides Washington?').toLowerCase();
+
+  if (correctStates.includes(stateGuess) === true) {
+    alert('Hey, you got it right. Good job! \n I\'ve lived previously at Idaho, Maryland and Hawaii.');
+    guessRight=true;
+
+  } else {
+    alert('Not quite.');
+  }
+}
+
+for (var k = 0 ; k < 7 && guessRight === false ; k++) {
+
+  stateGuessFunction();
+}
+
+/*
+var statesBeforeWa;
+
 var amountOfGuesses=0;
 var guessRight=false;
 while(amountOfGuesses<6 && guessRight===false){
@@ -129,7 +149,7 @@ while(amountOfGuesses<6 && guessRight===false){
     alert('Not quite.');
     amountOfGuesses++;
   }
-}
+} */
 
 alert('Let\'s play a guessing game. \n Answer the following questions and I\'ll let you know how you did.');
 var correctQuiz=0;
