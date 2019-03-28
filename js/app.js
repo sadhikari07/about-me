@@ -89,7 +89,6 @@ while(amountOfGuesses<6 && guessRight===false){
 
 alert('Let\'s play a guessing game. \n Answer the following questions and I\'ll let you know how you did.');
 var correctQuiz=0;
-var wrongQuiz=0;
 var quizQuestions= [
   'What is 1+1?',
   'What is the capital of Nepal?',
@@ -105,7 +104,6 @@ if (firstAnswer===quizAnswers[0]){
 }
 else{
   alert('That was incorrect.');
-  wrongQuiz++;
 }
 var secondAnswer= prompt(quizQuestions[1]).toLowerCase();
 if (secondAnswer===quizAnswers[1]){
@@ -114,7 +112,6 @@ if (secondAnswer===quizAnswers[1]){
 }
 else{
   alert('That was incorrect.');
-  wrongQuiz++;
 }
 var thirdAnswer= prompt(quizQuestions[2]);
 if (thirdAnswer===quizAnswers[2]){
@@ -123,7 +120,6 @@ if (thirdAnswer===quizAnswers[2]){
 }
 else{
   alert('That was incorrect.');
-  wrongQuiz++;
 }
 var fourthAnswer= prompt(quizQuestions[3]).toLowerCase();
 if (fourthAnswer===quizAnswers[3]){
@@ -132,7 +128,6 @@ if (fourthAnswer===quizAnswers[3]){
 }
 else{
   alert('That was incorrect.');
-  wrongQuiz++;
 }
 var fifthAnswer= prompt(quizQuestions[4]);
 if (fifthAnswer===quizAnswers[4]){
@@ -141,7 +136,6 @@ if (fifthAnswer===quizAnswers[4]){
 }
 else{
   alert('That was incorrect.');
-  wrongQuiz++;
 }
 var printResult= document.getElementById('quizResult');
 printResult.textContent= 'You got ' + correctQuiz + ' right out of 5 on the quiz game.';
