@@ -3,35 +3,51 @@ var userName = prompt('What is your name?');
 alert('Hi, ' + userName + ', great to meet you!!!');
 console.log('When asked their name, the user responded ' + userName);
 
-correctResponse = [
+var questionArray = ['Are you from here?',
+  'Let me guess your favourite food. Is it momo?',
+  'Is your favourite restaurant Sky Waikiki?',
+  'I\'m gonna buy you a drink today. I\'m guessing you like beer.'
+];
+
+var correctResponse = [
   'we\'re both from here',
   'That\'s awesome, I love momo too',
   'Thats my favourite restaurant too.',
   'That\'s my number one',
 ];
 
-incorrectResponse = [
+var incorrectResponse = [
   'Oh okay. I\'m from here.',
   'Why not? Momo\'s a great food.',
   'Our favourite restaurant is Sky Waikiki.',
-  'Beer is our favourite drink.'
+  'We\'ll drink your favourite drink today, whatever you like.'
 ];
 
 
-function introResponse(question, correctAnswer, i) {
 
-  var userAnswer = prompt('question');
+function introResponse(i) {
+  console.log('function is working!');
 
-  if(userAnswer === correctAnswer) {
+  var userAnswer = prompt(questionArray[i]).toLowerCase();
 
-    alert(correctResponse[i] );
+  if(userAnswer === 'yes' || userAnswer === 'y') {
+
+    alert(correctResponse[i]);
+  } else {
+
+    alert(incorrectResponse[i]);
   }
 
+}
+
+for (var i = 0 ; i < questionArray.length ; i++) {
+
+  introResponse(i);
 
 }
 
 
-
+/*
 var printPlace= document.getElementById('answerPlace');
 var homePlace = prompt('Are you from here').toUpperCase();
 if(homePlace==='YES'||homePlace==='Y'){
@@ -171,4 +187,4 @@ printResult.textContent= 'You got ' + correctQuiz + ' right out of 5 on the quiz
 
 var printAnswers= document.getElementById('answerResults');
 console.log(printAnswers);
-printAnswers.textContent=' Let\'s see how common we are after that guessing game: ';
+printAnswers.textContent=' Let\'s see how common we are after that guessing game: '; */
