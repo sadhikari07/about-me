@@ -1,5 +1,6 @@
 body{
-  background-color:#2be2db;
+  background-color:#2be243;
+  background-image: url('https://cdn.pixabay.com/photo/2017/08/12/10/13/background-2633962__340.jpg');
 }
 p {
   color: rgb(25, 74, 209);
@@ -9,8 +10,8 @@ h1 {
   color: rgb(150, 29, 29)
 }
 h2 {
-  background: rgb(82, 122, 59);
-  color: PURPLE;
+  background: rgb(5, 102, 141);
+  color: black;
   border-style: dashed; 
   text-align: center;
 }
@@ -34,4 +35,11 @@ main{
 #thankList{
   background-color: #ff6000;
   font-style: Arial;
+}
+#hobbies{
+  background-color: antiquewhite;
+  font-style: unset;
+}
+#accom{
+text-align: left;
 }

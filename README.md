@@ -4,3 +4,8 @@ The website will guess answers for five yes/no questions which are presented to 
 Using CSS, we will design the website so that it looks presentable to the user. We will be using borders, margins, paddle, font style, color, background and other features to improve on the layout of the website.
 
 Partner programming with Peter Tynan
+
+Image sources: 
+https://www.google.com/search?q=guessing+game&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjA5JjXzqjhAhVHsp4KHdgPBAIQ_AUIDigB&biw=1316&bih=684#imgrc=JxLkYEfAtTcwhM:
+https://www.google.com/search?q=guessing+game&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjA5JjXzqjhAhVHsp4KHdgPBAIQ_AUIDigB&biw=1316&bih=684#imgrc=JxLkYEfAtTcwhM:
+https://cdn.pixabay.com/photo/2017/08/12/10/13/background-2633962__340.jpg
