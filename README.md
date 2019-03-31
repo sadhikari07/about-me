@@ -6,8 +6,7 @@ Using CSS, we will design the website so that it looks presentable to the user. 
 Partner programming with Peter Tynan
 
 Image sources: 
-1. https://www.google.com/search?q=guessing+game&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjA5JjXzqjhAhVHsp4KHdgPBAIQ_AUIDigB&biw=1316&bih=684#imgrc=JxLkYEfAtTcwhM:
-2. https://www.google.com/search?q=guessing+game&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjA5JjXzqjhAhVHsp4KHdgPBAIQ_AUIDigB&biw=1316&bih=684#imgrc=JxLkYEfAtTcwhM:
-3. https://cdn.pixabay.com/photo/2017/08/12/10/13/background-2633962__340.jpg
-4. https://media.treehugger.com/assets/images/2012/10/shutterstock_104621369.jpg.860x0_q70_crop-smart.jpg
-5. https://www.resume-place.com/wp-content/uploads/Screen-Shot-2014-12-29-at-12.28.13-PM1.png
+1. https://orig00.deviantart.net/5f71/f/2018/299/b/7/da_1560_by_123freevectors-dcqg4yi.png
+
+2. https://get.pxhere.com/photo/water-outdoor-horizon-cloud-sky-sunrise-sunset-sunlight-morning-texture-lake-dawn-atmosphere-dusk-evening-reflection-publicdomain-background-afterglow-meteorological-phenomenon-atmospheric-phenomenon-red-sky-at-morning-104089.jpg
+
