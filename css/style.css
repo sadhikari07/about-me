@@ -10,7 +10,8 @@ h1 {
   color: rgb(150, 29, 29)
 }
 h2 {
-  background: rgb(5, 102, 141);
+  background: rgb(173, 59, 59);
+  font-size: 250%;
   color: black;
   border-style: dashed; 
   text-align: center;
@@ -21,10 +22,10 @@ title {
 }
 footer {
   color: black;
-  border-style: double;
 }
 main{
-  background: greenyellow;
+  margin-top: -2.5%;
+  background: rgb(48, 182, 182);
   border: dotted;
   text-align: center;
 }
@@ -33,13 +34,38 @@ main{
   font-style: oblique;
 }
 #thankList{
-  background-color: #ff6000;
+  background-color: goldenrod;
+  border-style: outset;
   font-style: Arial;
+  float: left;
+  margin: auto;
+  width: 48.3%;
 }
-#hobbies{
-  background-color: antiquewhite;
-  font-style: unset;
+
+#hobbies {
+  background-color: blanchedalmond;
+  border-style: solid;
+  float: left;
+  margin: auto;
+  width: 48.3%;
 }
-#accom{
-text-align: left;
+
+#myAccomplishments {
+  background-image: url('https://cdn10.bigcommerce.com/s-aub1q7pn32/products/14942/images/36808/5__01286.1502335022.500.750.jpg?c=2');
+  border-style: solid;
+  float: right;
+  margin: auto;
+  font-weight: bolder;
+  height: 100%;
+  width: 50%;
+  text-align: left;
+}
+
+#myLink{
+  background-color: goldenrod;
+  border-style: outset;
+  font-style: Arial;
+  float: left;
+  margin: auto;
+  width: 48.3%;
 }
